@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres@localhost/students2'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres@localhost/Grade_sys'
 app.config['SECRET_KEY'] = "random string"
 db = SQLAlchemy(app)
 
@@ -22,4 +22,5 @@ admin.add_view(ModelView(models.Subject, db.session))
 admin.add_view(ModelView(models.TeacherSubject, db.session))
 admin.add_view(ModelView(models.Course, db.session))
 admin.add_view(ModelView(models.Group, db.session))
-
+admin.add_view(ModelView(models.Assignment, db.session))
+admin.add_view(ModelView(models.Grade, db.session))
