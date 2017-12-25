@@ -1,8 +1,9 @@
 language: python
 python: 3.5.2
   
-  install: pip install -r requirements.txt
+install: pip install -r requirements.txt
   
   
-  before_script:
-  - psql -c 'create database Grade_sys;' -U postgres
+before_script:
+- psql -c 'create database Grade_sys;' -U postgres
+
