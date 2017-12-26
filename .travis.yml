@@ -8,5 +8,4 @@ before_script:
 - psql -c 'create database Grade_sys;' -U postgres
 
 script:
-  - nosetest
-  - pytest
+  test.py
